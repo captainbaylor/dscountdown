@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>上海度士实业发展有限公司倒计时</title>
+    <style type="text/css">
+        body {
+            background:url("background.jpg") no-repeat;
+            font-family: courier;
+            background-size: 100%;
+            padding-top: 200px;
+
+        }
+        .img {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        #cd_c {
+            font-size: 200px;
+        }
+      
+        #cname {
+            font-size: 80px;
+            color: #fff;
+        }
+
+        #caddress {
+            font-size: 40px;
+            color: #fff;
+        }
+
+        #cd_c{
+            color: #fff;
+            text-align: center;
+        }
+        
+        small {
+            font-size: 60px;
+        }
+    
+    </style>
+    <script type="text/javascript">
+
+        function GetRTime() {
+            var EndTime = new Date('2016/11/11 00:00:00');
+            var NowTime = new Date();
+            var t = EndTime.getTime() - NowTime.getTime();
+            var d = 0;
+            var h = 0;
+            var m = 0;
+            var s = 0;
+            if (t >= 0) {
+                d = Math.floor(t / 1000 / 60 / 60 / 24);
+                h = Math.floor(t / 1000 / 60 / 60 % 24);
+                m = Math.floor(t / 1000 / 60 % 60);
+
+                s = Math.floor(t / 1000 % 60);
+                if (s < 10) {
+                    s = "0" + s;
+                }
+                if (m < 10) {
+                    m = "0" + m;
+                }
+                if (h < 10) {
+                    h = "0" + h;
+
+                }
+                if (d < 10) {
+                    d = "0" + d;
+                }
+            }
+
+
+            document.getElementById("t_d").innerHTML = d;
+            document.getElementById("t_h").innerHTML = h;
+            document.getElementById("t_m").innerHTML = m;
+            document.getElementById("t_s").innerHTML = s;
+        }
+        setInterval(GetRTime, 0);
+    </script>
+</head>
+
+<body>
+  
+  
+
+
+</html>
